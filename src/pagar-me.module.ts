@@ -12,7 +12,8 @@ export class PagarMeModule {
         return {
             module: PagarMeModule,
             providers: [...PROVIDERS],
-            exports: [...PROVIDERS]
+            exports: [...PROVIDERS],
+            global: true
         }
     }
 }
