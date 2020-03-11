@@ -1,0 +1,32 @@
+{
+  "name": "nestjs-pagarme",
+  "version": "0.0.1",
+  "description": "NestJS wrapper for pagar.me api",
+  "main": "dist/index",
+  "types": "dist/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && tsc",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "nestjs",
+    "pagar.me",
+    "pagarme",
+    "gateway",
+    "payment",
+    "credit",
+    "card"
+  ],
+  "author": "Luiz Gustavo Freire Gama",
+  "license": "MIT",
+  "dependencies": {
+    "@nestjs/common": "^6.11.11",
+    "rxjs": "^6.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.8.3"
+  }
+}
