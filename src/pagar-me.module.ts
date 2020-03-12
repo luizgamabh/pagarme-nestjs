@@ -9,6 +9,7 @@ export class PagarMeModule {
       {
         provide: PagarMeService,
         useValue: new PagarMeService(accessData),
+        global: true,
       },
     ];
     return {
