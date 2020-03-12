@@ -1,10 +1,10 @@
 export class ResultDto<T = any> {
   timestamp: string;
   constructor(
-    private success: boolean,
-    private data?: T,
-    private message?: string | null,
-    private errors?: any,
+    public success: boolean,
+    public data?: T,
+    public message?: string | null,
+    public errors?: any,
   ) {
     this.timestamp = new Date().toISOString();
   }

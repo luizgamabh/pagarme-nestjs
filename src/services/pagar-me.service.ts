@@ -1,5 +1,5 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { pagarme } from 'pagarme';
+import pagarme from 'pagarme';
 import {
   PagarMeAccessData,
   PagarMeModel,
@@ -22,31 +22,32 @@ export class PagarMeService {
     this.accessData = connectionData;
   }
 
-  async connect() {
-    const [error, connection] = await promised(
-      pagarme.client.connect(this.accessData),
-    );
+  async connect(): Promise<ResultDto<any[]>> {
+    const [error, client] = await pagarme.client
+      .connect(this.accessData)
+      .then(client => [null, client])
+      .catch(error => [error, null]);
     if (error) {
-      return new HttpException(
+      throw new HttpException(
         new ResultDto(false, undefined, 'Authentication error', error),
         HttpStatus.FORBIDDEN,
       );
     }
-    this.model.connection = connection;
-    return this.model.connection;
+    this.model.client = client;
+    return await this.transactions();
   }
 
-  async transactions() {
+  async transactions(): Promise<ResultDto<any[]>> {
     const [error, transactions] = await promised(
-      pagarme.client.transactions.all(),
+      this.model.client.transactions.all(),
     );
     if (error) {
-      return new HttpException(
+      throw new HttpException(
         new ResultDto(false, undefined, 'Error fetching transactions', error),
         HttpStatus.UNPROCESSABLE_ENTITY,
       );
     }
     this.model.transactions = transactions;
-    return this.model.transactions;
+    return new ResultDto(true, this.model.transactions);
   }
 }

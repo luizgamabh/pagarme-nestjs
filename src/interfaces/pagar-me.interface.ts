@@ -19,6 +19,6 @@ export type PagarMeAccessData =
   | EncryptionKeyStrategy;
 
 export interface PagarMeModel {
-  connection?: string;
+  client?: any;
   transactions?: any[];
 }
