@@ -22,11 +22,16 @@
   "license": "MIT",
   "dependencies": {
     "@nestjs/common": "^6.11.11",
-    "rxjs": "^6.5.4"
+    "rxjs": "^6.5.4",
+    "pagarme": "^4.7.0"
   },
   "devDependencies": {
     "@types/node": "^13.9.0",
     "rimraf": "^3.0.2",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "prettier": "^1.19.1",
+    "@nestjs/testing": "^6.11.11",
+    "jest": "^25.1.0",
+    "supertest": "^4.0.2"
   }
 }
