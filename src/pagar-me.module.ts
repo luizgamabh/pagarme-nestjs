@@ -9,13 +9,13 @@ export class PagarMeModule {
       {
         provide: PagarMeService,
         useValue: new PagarMeService(accessData),
-        global: true,
       },
     ];
     return {
       module: PagarMeModule,
       providers: [...PROVIDERS],
       exports: [...PROVIDERS],
+      global: true,
     };
   }
 }
