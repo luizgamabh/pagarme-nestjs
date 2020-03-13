@@ -1,0 +1,10 @@
+image: node:13
+cache:
+  paths:
+    - node_modules/
+test_async:
+  tags:
+    - nestjs
+  script:
+    - npm install
+    - npm run test
