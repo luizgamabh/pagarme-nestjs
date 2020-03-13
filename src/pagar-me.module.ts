@@ -1,10 +1,10 @@
 import { DynamicModule, Module } from '@nestjs/common';
 import { PagarMeService } from './services/pagar-me.service';
-import { PagarMeAccessData } from './interfaces/pagar-me.interface';
+import { IPagarMeAccessData } from './interfaces/pagar-me.interface';
 
 @Module({})
 export class PagarMeModule {
-  static forRoot(accessData: PagarMeAccessData): DynamicModule {
+  static forRoot(accessData: IPagarMeAccessData): DynamicModule {
     const PROVIDERS = [
       {
         provide: PagarMeService,

@@ -1,24 +1,24 @@
-export interface PasswordStrategy {
+export interface IPasswordStrategy {
   strategy: 'password';
   email: string;
   password: string;
 }
 
-export interface ApiKeyStrategy {
+export interface IApiKeyStrategy {
   strategy: 'apiKey';
   api_key: string;
 }
-export interface EncryptionKeyStrategy {
+export interface IEncryptionKeyStrategy {
   strategy: 'encryptionKey';
   encryption_key: string;
 }
 
-export type PagarMeAccessData =
-  | PasswordStrategy
-  | ApiKeyStrategy
-  | EncryptionKeyStrategy;
+export type IPagarMeAccessData =
+  | IPasswordStrategy
+  | IApiKeyStrategy
+  | IEncryptionKeyStrategy;
 
-export interface PagarMeModel {
+export interface IPagarMeModel {
   client?: any;
   transactions?: any[];
 }
