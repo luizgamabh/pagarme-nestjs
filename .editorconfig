@@ -1,0 +1,4 @@
+[*.ts]
+indent_size = tab
+indent_style = space
+tab_width = 2
