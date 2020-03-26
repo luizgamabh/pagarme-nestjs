@@ -53,7 +53,7 @@ export class PagarMeService {
     return new ResultDto(true, this.model);
   }
 
-  unprocessable(error?): never {
+  protected unprocessable(error?): never {
     throw new HttpException(
       new ResultDto(false, undefined, 'Error fetching transactions', error),
       HttpStatus.UNPROCESSABLE_ENTITY,
