@@ -1,6 +1,6 @@
 ![pagar.me](https://pagarme.s3.amazonaws.com/logo.svg)
 
-<img src="https://guto-dev.s3.amazonaws.com/img/nestjs-logo.svg" alt="NestJS" style="zoom:10%;" />
+![Nest](https://s3.amazonaws.com/nest.js/logo-sm.svg)
 
 <p style="text-align: center;"><a target="_blank" href="https://github.com/pagarme/pagarme-js">Pagar.me</a> module for <a target="_blank" href="https://github.com/nestjs/nestJS">Nest</a>.</p>
 
