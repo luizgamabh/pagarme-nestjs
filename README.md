@@ -1,6 +1,6 @@
 ![pagar.me](https://pagarme.s3.amazonaws.com/logo.svg)
 
-![Nest](https://s3.amazonaws.com/nest.js/logo-sm.svg)
+![Nest](https://s3.amazonaws.com/nest.js/nestjs.svg)
 
 <p style="text-align: center;"><a target="_blank" href="https://github.com/pagarme/pagarme-js">Pagar.me</a> module for <a target="_blank" href="https://github.com/nestjs/nestJS">Nest</a>.</p>
 
@@ -60,7 +60,7 @@ Autocomplete will consider the selected strategy as in the image below:
 
 ## Dependencies
 
-[pagarme-js](https://www.npmjs.com/package/pagarmejs)
+[pagarme-ts](https://www.npmjs.com/package/pagarme-ts)
 
 
 
