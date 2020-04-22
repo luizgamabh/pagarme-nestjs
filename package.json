@@ -1,5 +1,5 @@
 {
-  "name": "nestjs-pagarme",
+  "name": "pagarme-nestjs",
   "version": "1.0.0",
   "description": "NestJS wrapper for pagar.me api",
   "main": "dist/index",
