@@ -23,7 +23,7 @@
   "dependencies": {
     "@nestjs/common": "^6.11.11",
     "rxjs": "^6.5.4",
-    "pagarme": "^4.7.0"
+    "pagarme-ts": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^13.9.0",
